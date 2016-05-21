@@ -1,0 +1,38 @@
+<idea-plugin version="2">
+  <id>me.pkhope.plugin.library_manager</id>
+  <name>AndroidLibraryManager</name>
+  <version>1.0</version>
+  <vendor email="hhxnbw@gmail.com" url="http://www.pkhope.me">None</vendor>
+
+  <description><![CDATA[
+      The plugin used to manage your library<br>
+      <em>most HTML tags may be used</em>
+    ]]></description>
+
+  <change-notes><![CDATA[
+      Add change notes here.<br>
+      <em>most HTML tags may be used</em>
+    ]]>
+  </change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="141.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+    <action id="LibraryManager" class="LibraryManagerAction" text="Library Manager">
+      <add-to-group group-id="ToolsMenu" anchor="first"/>
+    </action>
+  </actions>
+
+</idea-plugin>

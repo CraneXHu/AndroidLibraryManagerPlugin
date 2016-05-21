@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="AndroidLibraryManager:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/AndroidLibraryManager_jar</output-path>
+    <root id="archive" name="AndroidLibraryManager.jar">
+      <element id="module-output" name="AndroidLibraryManager" />
+    </root>
+  </artifact>
+</component>
