@@ -1,25 +1,26 @@
-import com.intellij.ide.IdeRepaintManager;
-import com.intellij.openapi.application.Application;
-import com.intellij.openapi.application.PathManager;
-import com.intellij.openapi.application.PluginPathManager;
+import com.intellij.openapi.command.WriteCommandAction;
+import com.intellij.openapi.editor.Document;
+import com.intellij.openapi.fileEditor.FileDocumentManager;
+import com.intellij.openapi.fileEditor.impl.FileDocumentManagerImpl;
 import com.intellij.openapi.module.Module;
 import com.intellij.openapi.module.ModuleManager;
 import com.intellij.openapi.project.Project;
+import com.intellij.openapi.roots.ModuleRootManager;
 import com.intellij.openapi.ui.DialogWrapper;
 import com.intellij.openapi.ui.Messages;
-import com.intellij.openapi.vfs.LocalFileSystem;
 import com.intellij.openapi.vfs.VirtualFile;
-import com.intellij.util.EnvironmentUtil;
 import org.jetbrains.annotations.Nullable;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.io.IOException;
+import java.io.InputStream;
+import java.util.*;
+import java.util.List;
 
 /**
  * Created by pkhope on 2016/5/19.
@@ -35,10 +36,14 @@ public class LibraryManagerDialog extends DialogWrapper {
     private JButton mAdd;
     private JButton mDelete;
 
+    private LibraryDocument mDocument;
+
     protected LibraryManagerDialog(@Nullable Project project) {
         super(project);
 
         mProject = project;
+        mDocument = new LibraryDocument();
+        mDocument.open();
 
         setTitle("Library Manager");
         initModuleCombo();
@@ -48,17 +53,20 @@ public class LibraryManagerDialog extends DialogWrapper {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String libraryName = Messages.showInputDialog(mProject, "Input your library name", "Add", null);
-                if (libraryName.equals("")){
+                if (libraryName == null){
                     return;
                 }
                 mListModel.addElement(new JCheckBox(libraryName));
+//                mDocument.getLibraryList().add(libraryName);
             }
         });
 
         mDelete.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                mListModel.remove(mList.getSelectedIndex());
+                int index = mList.getSelectedIndex();
+                mListModel.remove(index);
+//                mDocument.getLibraryList().remove(index);
             }
         });
 
@@ -89,27 +97,47 @@ public class LibraryManagerDialog extends DialogWrapper {
         mPanel.add(mList);
         mList.setMaximumSize(new Dimension(Integer.MAX_VALUE, Integer.MAX_VALUE));
 
-
-        String pluginPath = PathManager.getConfigPath() + "\\plugins" + "\\AndroidLibraryManager";
-//        Messages.showMessageDialog(mProject,pluginPath,"Path",null);
-        File appDir = new File(pluginPath);
-        if (!appDir.exists()) {
-            appDir.mkdir();
+        for (String libraryName : mDocument.getLibraryList()){
+            mListModel.addElement(new JCheckBox(libraryName));
         }
 
-        File file = new File(appDir,"library.dat");
-        try {
-            BufferedReader in = new BufferedReader(new FileReader(file));
-            String s;
-            while((s = in.readLine()) != null){
-                mListModel.addElement(new JCheckBox(s));
+
+    }
+
+    public void save(){
+        JCheckBox checkBox = null;
+        List<String > checkedList = new ArrayList<>();
+        int size = mListModel.size();
+        for (int i = 0; i < size; i++){
+            checkBox = (JCheckBox)mListModel.getElementAt(i);
+            mDocument.getLibraryList().add(checkBox.getText());
+            if (checkBox.isSelected()){
+                checkedList.add(checkBox.getText());
             }
-        }catch (IOException e){
-            e.printStackTrace();
         }
 
-        mListModel.addElement(new JCheckBox("Hello world"));
+        Module module = ModuleManager.getInstance(mProject).findModuleByName((String) moduleCombo.getSelectedItem());
+        VirtualFile root = module.getModuleFile().getParent();
+        VirtualFile script = root.findChild("build.gradle");
+        final Document document = FileDocumentManager.getInstance().getDocument(script);
+        new WriteCommandAction.Simple(mProject){
+            @Override
+            protected void run() throws Throwable {
+                String text = document.getText();
+                int index = text.indexOf("dependencies");
+                index += "dependencies".length();
+                String result = text.substring(0,index);
+                result += " {" + "\n";
+                result += "    compile fileTree(dir: 'libs', include: ['*.jar'])" + "\n";
+                for (String libraryName : checkedList){
+                    result += "    compile " + "\'" + libraryName + "\'" + "\n";
+                }
+                result += "}";
+                document.setText(result);
+            }
+        }.execute();
 
+        mDocument.save();
     }
 
 }
