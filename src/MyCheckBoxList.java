@@ -4,8 +4,6 @@ import javax.swing.*;
 import javax.swing.border.Border;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
 
 /**
  * Created by pkhope on 2016/5/21.
@@ -18,24 +16,6 @@ public class MyCheckBoxList extends JBList
     public MyCheckBoxList()
     {
         setCellRenderer(new CellRenderer());
-
-        addMouseListener(new MouseAdapter()
-                         {
-                             public void mousePressed(MouseEvent e)
-                             {
-                                 int index = locationToIndex(e.getPoint());
-
-                                 if (index != -1) {
-                                     JCheckBox checkbox = (JCheckBox)
-                                             getModel().getElementAt(index);
-                                     checkbox.setSelected(
-                                             !checkbox.isSelected());
-                                     repaint();
-                                 }
-                             }
-                         }
-        );
-
         setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
     }
 
