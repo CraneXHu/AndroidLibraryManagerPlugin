@@ -24,17 +24,6 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/AndroidLibraryManager/OnListChangeListener.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/AndroidLibraryManager/PresenterImpl.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/AndroidLibraryManager/listerner/OnListChangeListener.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/listerner/OnListChangeListener.java" afterPath="$PROJECT_DIR$/src/listener/OnListChangeListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/AndroidLibraryManager_jar/AndroidLibraryManager.jar" afterPath="$PROJECT_DIR$/out/artifacts/AndroidLibraryManager_jar/AndroidLibraryManager.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/AndroidLibraryManager/model/LibraryModel.class" afterPath="$PROJECT_DIR$/out/production/AndroidLibraryManager/model/LibraryModel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/AndroidLibraryManager/model/LibraryModelImpl$1.class" afterPath="$PROJECT_DIR$/out/production/AndroidLibraryManager/model/LibraryModelImpl$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/AndroidLibraryManager/model/LibraryModelImpl.class" afterPath="$PROJECT_DIR$/out/production/AndroidLibraryManager/model/LibraryModelImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/AndroidLibraryManager/presenter/LibraryPresenterImpl.class" afterPath="$PROJECT_DIR$/out/production/AndroidLibraryManager/presenter/LibraryPresenterImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/AndroidLibraryManager/view/LibraryViewImpl.class" afterPath="$PROJECT_DIR$/out/production/AndroidLibraryManager/view/LibraryViewImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/LibraryModel.java" afterPath="$PROJECT_DIR$/src/model/LibraryModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/LibraryModelImpl.java" afterPath="$PROJECT_DIR$/src/model/LibraryModelImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/presenter/LibraryPresenterImpl.java" afterPath="$PROJECT_DIR$/src/presenter/LibraryPresenterImpl.java" />
     </list>
     <ignored path="AndroidLibraryManager.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -354,24 +343,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AndroidLibraryManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AndroidLibraryManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="listener" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
