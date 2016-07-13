@@ -9,7 +9,7 @@ import com.intellij.openapi.module.ModuleManager;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.vfs.VirtualFile;
 import entity.ListItem;
-import listerner.OnListChangeListener;
+import listener.OnListChangeListener;
 
 import java.io.*;
 import java.util.ArrayList;

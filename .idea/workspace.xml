@@ -12,7 +12,6 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/AndroidLibraryManager/IView.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/AndroidLibraryManager/LibraryDocument$1.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/AndroidLibraryManager/LibraryDocument.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/AndroidLibraryManager/LibraryManagerAction.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/AndroidLibraryManager/LibraryManagerDialog$1.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/AndroidLibraryManager/LibraryManagerDialog$2.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/AndroidLibraryManager/LibraryManagerDialog$3.class" afterPath="" />
@@ -24,18 +23,18 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/AndroidLibraryManager/MyCheckBoxList.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/AndroidLibraryManager/OnListChangeListener.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/AndroidLibraryManager/PresenterImpl.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/IModel.java" afterPath="$PROJECT_DIR$/src/model/LibraryModel.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/IPresenter.java" afterPath="$PROJECT_DIR$/src/presenter/LibraryPresenter.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/IView.java" afterPath="$PROJECT_DIR$/src/view/LibraryView.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/LibraryDocument.java" afterPath="$PROJECT_DIR$/src/model/LibraryModelImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/LibraryManagerDialog.java" afterPath="$PROJECT_DIR$/src/view/LibraryViewImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/LibraryManagerForm.form" afterPath="$PROJECT_DIR$/src/view/LibraryManagerForm.form" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ListItem.java" afterPath="$PROJECT_DIR$/src/entity/ListItem.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/MyCheckBoxList.java" afterPath="$PROJECT_DIR$/src/widget/MyCheckBoxList.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/OnListChangeListener.java" afterPath="$PROJECT_DIR$/src/listerner/OnListChangeListener.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/PresenterImpl.java" afterPath="$PROJECT_DIR$/src/presenter/LibraryPresenterImpl.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/AndroidLibraryManager/listerner/OnListChangeListener.class" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/listerner/OnListChangeListener.java" afterPath="$PROJECT_DIR$/src/listener/OnListChangeListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/AndroidLibraryManager_jar/AndroidLibraryManager.jar" afterPath="$PROJECT_DIR$/out/artifacts/AndroidLibraryManager_jar/AndroidLibraryManager.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/AndroidLibraryManager/model/LibraryModel.class" afterPath="$PROJECT_DIR$/out/production/AndroidLibraryManager/model/LibraryModel.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/AndroidLibraryManager/model/LibraryModelImpl$1.class" afterPath="$PROJECT_DIR$/out/production/AndroidLibraryManager/model/LibraryModelImpl$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/AndroidLibraryManager/model/LibraryModelImpl.class" afterPath="$PROJECT_DIR$/out/production/AndroidLibraryManager/model/LibraryModelImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/AndroidLibraryManager/presenter/LibraryPresenterImpl.class" afterPath="$PROJECT_DIR$/out/production/AndroidLibraryManager/presenter/LibraryPresenterImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/AndroidLibraryManager/view/LibraryViewImpl.class" afterPath="$PROJECT_DIR$/out/production/AndroidLibraryManager/view/LibraryViewImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LibraryManagerAction.java" afterPath="$PROJECT_DIR$/src/LibraryManagerAction.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/LibraryModel.java" afterPath="$PROJECT_DIR$/src/model/LibraryModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/LibraryModelImpl.java" afterPath="$PROJECT_DIR$/src/model/LibraryModelImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/presenter/LibraryPresenterImpl.java" afterPath="$PROJECT_DIR$/src/presenter/LibraryPresenterImpl.java" />
     </list>
     <ignored path="AndroidLibraryManager.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -119,8 +118,8 @@
       <file leaf-file-name="LibraryViewImpl.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/view/LibraryViewImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="137" column="33" selection-start-line="137" selection-start-column="33" selection-end-line="137" selection-end-column="33" />
+            <state relative-caret-position="3537">
+              <caret line="135" column="26" selection-start-line="135" selection-start-column="26" selection-end-line="135" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2554#2555#0" expanded="true" />
@@ -137,39 +136,29 @@
               <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#712#713#0" expanded="true" />
-                <element signature="e#745#746#0" expanded="true" />
-                <element signature="e#785#786#0" expanded="true" />
-                <element signature="e#818#819#0" expanded="true" />
-                <element signature="e#1128#1129#0" expanded="true" />
-                <element signature="e#1168#1169#0" expanded="true" />
-                <element signature="e#1356#1357#0" expanded="true" />
-                <element signature="e#1390#1391#0" expanded="true" />
-                <element signature="e#1443#1444#0" expanded="true" />
-                <element signature="e#1505#1506#0" expanded="true" />
+                <element signature="e#711#712#0" expanded="true" />
+                <element signature="e#744#745#0" expanded="true" />
+                <element signature="e#784#785#0" expanded="true" />
+                <element signature="e#817#818#0" expanded="true" />
+                <element signature="e#1127#1128#0" expanded="true" />
+                <element signature="e#1167#1168#0" expanded="true" />
+                <element signature="e#1355#1356#0" expanded="true" />
+                <element signature="e#1389#1390#0" expanded="true" />
+                <element signature="e#1442#1443#0" expanded="true" />
+                <element signature="e#1504#1505#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="OnListChangeListener.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/listerner/OnListChangeListener.java">
+        <entry file="file://$PROJECT_DIR$/src/listener/OnListChangeListener.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="243">
               <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LibraryPresenter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/presenter/LibraryPresenter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="81">
-              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -254,10 +243,10 @@
     <treeState />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="x" value="33" />
+    <option name="y" value="16" />
     <option name="width" value="1307" />
-    <option name="height" value="784" />
+    <option name="height" value="780" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -382,7 +371,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="listerner" />
+              <option name="myItemId" value="listener" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -691,8 +680,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1307" height="784" extended-state="7" />
-    <editor active="true" />
+    <frame x="33" y="16" width="1307" height="780" extended-state="1" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -705,7 +694,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22614275" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22614275" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24938068" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -754,7 +743,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/GUIForm.form" />
     <entry file="file://$PROJECT_DIR$/src/LibraryManagerDialog.form" />
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/openapi.jar!/com/intellij/ui/table/JBTable.class">
       <provider selected="true" editor-type-id="text-editor">
@@ -1010,7 +998,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/listerner/OnListChangeListener.java">
+    <entry file="file://$PROJECT_DIR$/src/listener/OnListChangeListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
           <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
@@ -1026,16 +1014,16 @@
           <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#712#713#0" expanded="true" />
-            <element signature="e#745#746#0" expanded="true" />
-            <element signature="e#785#786#0" expanded="true" />
-            <element signature="e#818#819#0" expanded="true" />
-            <element signature="e#1128#1129#0" expanded="true" />
-            <element signature="e#1168#1169#0" expanded="true" />
-            <element signature="e#1356#1357#0" expanded="true" />
-            <element signature="e#1390#1391#0" expanded="true" />
-            <element signature="e#1443#1444#0" expanded="true" />
-            <element signature="e#1505#1506#0" expanded="true" />
+            <element signature="e#711#712#0" expanded="true" />
+            <element signature="e#744#745#0" expanded="true" />
+            <element signature="e#784#785#0" expanded="true" />
+            <element signature="e#817#818#0" expanded="true" />
+            <element signature="e#1127#1128#0" expanded="true" />
+            <element signature="e#1167#1168#0" expanded="true" />
+            <element signature="e#1355#1356#0" expanded="true" />
+            <element signature="e#1389#1390#0" expanded="true" />
+            <element signature="e#1442#1443#0" expanded="true" />
+            <element signature="e#1504#1505#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1099,10 +1087,15 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/androidlibrarymanager.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/view/LibraryViewImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="137" column="33" selection-start-line="137" selection-start-column="33" selection-end-line="137" selection-end-column="33" />
+        <state relative-caret-position="3537">
+          <caret line="135" column="26" selection-start-line="135" selection-start-column="26" selection-end-line="135" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2554#2555#0" expanded="true" />

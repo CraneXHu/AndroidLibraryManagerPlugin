@@ -2,7 +2,7 @@ package presenter;
 
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.ui.Messages;
-import listerner.OnListChangeListener;
+import listener.OnListChangeListener;
 import model.LibraryModel;
 import model.LibraryModelImpl;
 import entity.ListItem;
