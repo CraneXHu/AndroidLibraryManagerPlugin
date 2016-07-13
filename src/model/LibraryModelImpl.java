@@ -1,3 +1,5 @@
+package model;
+
 import com.intellij.openapi.application.PathManager;
 import com.intellij.openapi.command.WriteCommandAction;
 import com.intellij.openapi.editor.Document;
@@ -6,6 +8,8 @@ import com.intellij.openapi.module.Module;
 import com.intellij.openapi.module.ModuleManager;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.vfs.VirtualFile;
+import entity.ListItem;
+import listerner.OnListChangeListener;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -16,14 +20,14 @@ import java.util.regex.Pattern;
 /**
  * Created by pkhope on 2016/5/21.
  */
-public class LibraryDocument implements IModel{
+public class LibraryModelImpl implements LibraryModel {
 
     private Project mProject;
     private String mModule;
     private String mFilePath;
     protected List<ListItem> mList;
 
-    LibraryDocument(Project project){
+    public LibraryModelImpl(Project project){
         super();
         mProject = project;
         mList = new ArrayList<>();

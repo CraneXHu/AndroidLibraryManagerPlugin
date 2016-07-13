@@ -1,21 +1,28 @@
+package presenter;
+
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.ui.Messages;
+import listerner.OnListChangeListener;
+import model.LibraryModel;
+import model.LibraryModelImpl;
+import entity.ListItem;
+import view.LibraryView;
 
 import java.util.List;
 
 /**
  * Created by pkhope on 2016/5/21.
  */
-public class PresenterImpl implements IPresenter, OnListChangeListener {
+public class LibraryPresenterImpl implements LibraryPresenter, OnListChangeListener {
 
     private Project mProject;
-    private IView mView;
-    private IModel mModel;
+    private LibraryView mView;
+    private LibraryModel mModel;
 
-    PresenterImpl(IView view, Project project){
+    public LibraryPresenterImpl(LibraryView view, Project project){
         mView = view;
         mProject = project;
-        mModel = new LibraryDocument(project);
+        mModel = new LibraryModelImpl(project);
     }
 
     @Override

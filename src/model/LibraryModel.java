@@ -1,7 +1,11 @@
+package model;
+
+import listerner.OnListChangeListener;
+
 /**
  * Created by pkhope on 2016/5/21.
  */
-public interface IModel {
+public interface LibraryModel {
 
     void load(OnListChangeListener listener);
 

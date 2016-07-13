@@ -1,3 +1,5 @@
+package widget;
+
 import com.intellij.ui.components.JBList;
 
 import javax.swing.*;

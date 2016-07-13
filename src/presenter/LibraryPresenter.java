@@ -1,7 +1,9 @@
+package presenter;
+
 /**
  * Created by pkhope on 2016/5/21.
  */
-public interface IPresenter {
+public interface LibraryPresenter {
 
     void load();
 

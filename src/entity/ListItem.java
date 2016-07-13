@@ -1,3 +1,5 @@
+package entity;
+
 /**
  * Created by thinkpad on 2016/5/22.
  */
@@ -6,7 +8,7 @@ public class ListItem {
     private String mName;
     private boolean mSelected;
 
-    ListItem(){
+    public ListItem(){
         mName = "";
         mSelected = false;
     }

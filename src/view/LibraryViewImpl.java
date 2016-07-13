@@ -1,9 +1,14 @@
+package view;
+
 import com.intellij.openapi.module.Module;
 import com.intellij.openapi.module.ModuleManager;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.ui.DialogWrapper;
 import com.intellij.openapi.ui.Messages;
+import entity.ListItem;
 import org.jetbrains.annotations.Nullable;
+import presenter.LibraryPresenterImpl;
+import widget.MyCheckBoxList;
 
 import javax.swing.*;
 import java.awt.*;
@@ -13,7 +18,7 @@ import java.util.List;
 /**
  * Created by pkhope on 2016/5/19.
  */
-public class LibraryManagerDialog extends DialogWrapper implements IView{
+public class LibraryViewImpl extends DialogWrapper implements LibraryView {
 
     Project mProject;
     private JPanel mMainPanel;
@@ -24,14 +29,14 @@ public class LibraryManagerDialog extends DialogWrapper implements IView{
     private JButton mAdd;
     private JButton mDelete;
 
-    private PresenterImpl mPresenter;
+    private LibraryPresenterImpl mPresenter;
 
-    protected LibraryManagerDialog(@Nullable Project project) {
+    public LibraryViewImpl(@Nullable Project project) {
         super(project);
 
         mProject = project;
 
-        mPresenter = new PresenterImpl(this,project);
+        mPresenter = new LibraryPresenterImpl(this,project);
 
         setTitle("Library Manager");
         initModuleCombo();
