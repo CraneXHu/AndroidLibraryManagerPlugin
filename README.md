@@ -13,7 +13,7 @@ This's a android studio plugin which add library to module gradle script.
 2. Select Module and library 
 
 # License
-Copyright 2015 pkhope
+Copyright 2016 pkhope
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
