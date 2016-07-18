@@ -37,7 +37,7 @@ public class LibraryModelImpl implements LibraryModel {
     @Override
     public void load(OnListChangeListener listener){
         loadLibrary(listener);
-        loadScript(listener);
+//        loadScript(listener);
     }
 
     @Override
@@ -53,6 +53,14 @@ public class LibraryModelImpl implements LibraryModel {
         }
 
         File file = new File(appDir,"library.dat");
+        if (!file.exists()){
+            try {
+                file.createNewFile();
+            } catch (Exception e){
+                e.printStackTrace();
+                return;
+            }
+        }
         try {
             BufferedReader in = new BufferedReader(new FileReader(file));
             String s;
@@ -64,7 +72,7 @@ public class LibraryModelImpl implements LibraryModel {
             listener.onError("Open Library Failed.");
             e.printStackTrace();
         }
-        listener.onSuccess(mList);
+//        listener.onSuccess(mList);
     }
 
     protected void saveLibrary(OnListChangeListener listener){
@@ -86,11 +94,30 @@ public class LibraryModelImpl implements LibraryModel {
     public void loadScript(OnListChangeListener listener) {
 
         Document document = getModuleScript();
+        if (document == null){
+            listener.onError("Script file doesn't exist.");
+            return;
+        }
+
         String text = document.getText();
         Pattern pattern = Pattern.compile("compile '(.+?)'");
         Matcher matcher = pattern.matcher(text);
         while (matcher.find()){
+            boolean alreadyExist = false;
             String name = matcher.group(1);
+            if (mList.size() > 0){
+                for (ListItem item : mList){
+                    if (item.getName().equals(name)){
+                        alreadyExist = true;
+                        break;
+                    }
+                }
+                if (!alreadyExist){
+                    addItem(name);
+                }
+            } else {
+                addItem(name);
+            }
             for (ListItem item : mList){
                 if (item.getName().equals(name)){
                     item.setSelected(true);
@@ -162,6 +189,9 @@ public class LibraryModelImpl implements LibraryModel {
         Module module = ModuleManager.getInstance(mProject).findModuleByName(mModule);
         VirtualFile root = module.getModuleFile().getParent();
         VirtualFile script = root.findChild("build.gradle");
+        if (script == null){
+            return null;
+        }
         Document document = FileDocumentManager.getInstance().getDocument(script);
         return document;
     }

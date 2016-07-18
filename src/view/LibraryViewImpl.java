@@ -38,12 +38,12 @@ public class LibraryViewImpl extends DialogWrapper implements LibraryView {
 
         mPresenter = new LibraryPresenterImpl(this,project);
 
-        setTitle("Library Manager");
+        setTitle("Dependency Manager");
         initModuleCombo();
         initLibraryList();
 
-        mPresenter.changeModule((String) moduleCombo.getItemAt(0));
         mPresenter.load();
+        mPresenter.changeModule((String) moduleCombo.getItemAt(0));
 
         mAdd.addActionListener(new ActionListener() {
             @Override
@@ -79,11 +79,16 @@ public class LibraryViewImpl extends DialogWrapper implements LibraryView {
         ModuleManager moduleManager = ModuleManager.getInstance(mProject);
         Module[] modules = moduleManager.getModules();
         for (Module module : modules){
-            moduleCombo.addItem(module.getName());
+            if (!module.getName().equals(mProject.getName())){
+                moduleCombo.addItem(module.getName());
+            }
         }
+
+
         moduleCombo.addItemListener(new ItemListener() {
             @Override
             public void itemStateChanged(ItemEvent e) {
+                mListModel.clear();
                 mPresenter.changeModule((String) e.getItem());
             }
         });
