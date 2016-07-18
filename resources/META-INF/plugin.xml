@@ -30,7 +30,7 @@
 
   <actions>
     <!-- Add your actions here -->
-    <action id="LibraryManager" class="LibraryManagerAction" text="Library Manager">
+    <action id="LibraryManager" class="LibraryManagerAction" text="Dependency Manager">
       <add-to-group group-id="ToolsMenu" anchor="first"/>
     </action>
   </actions>

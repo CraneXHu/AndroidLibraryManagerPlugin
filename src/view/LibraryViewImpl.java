@@ -48,7 +48,7 @@ public class LibraryViewImpl extends DialogWrapper implements LibraryView {
         mAdd.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String libraryName = Messages.showInputDialog(mProject, "Input your library name", "Add", null);
+                String libraryName = Messages.showInputDialog(mProject, "Input your dependency", "Add", null);
                 if (libraryName == null){
                     return;
                 }
