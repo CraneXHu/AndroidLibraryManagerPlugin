@@ -1,18 +1,21 @@
 # AndroidLibraryManagerPlugin
 This's a android studio plugin which add library to module gradle script.
 
-# Install
+## Install
+
 1. Download AndroidLibraryManager.jar file https://plugins.jetbrains.com/plugin/8584?pr=idea
 2. Open Android Studio,Preferences -> Plugins -> Install plugin from disk -> select AndroidLibraryManager.jar
 
-# Usage
+## Usage
+
 1. Tools -> Library Manager
 
  ![image](https://github.com/pkhope/AndroidLibraryManagerPlugin/blob/master/androidlibrarymanager.png)
  
 2. Select Module and library 
 
-# License
+## License
+
 Copyright 2016 pkhope
 
 Licensed under the Apache License, Version 2.0 (the "License");
